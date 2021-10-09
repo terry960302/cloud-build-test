@@ -10,10 +10,11 @@ import (
 func handler(w http.ResponseWriter, r *http.Request) {
 	log.Print("[로그] 방금 요청을 받았다.")
 	target := os.Getenv("TARGET")
+	version := "1.0.0"
 	if target == "" {
 		target = "세상아"
 	}
-	fmt.Fprintf(w, "Hello %s!\n", target)
+	fmt.Fprintf(w, "Hello %s! ver[%s]\n", target, version)
 }
 
 func main() {
