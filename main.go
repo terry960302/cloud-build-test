@@ -12,7 +12,7 @@ func handler(w http.ResponseWriter, r *http.Request) {
 	target := os.Getenv("TARGET")
 	version := "1.0.2"
 	if target == "" {
-		target = "세상아"
+		target = "세상아."
 	}
 	fmt.Fprintf(w, "Hello %s! ver[%s]\n", target, version)
 }
